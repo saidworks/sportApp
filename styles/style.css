@@ -1,0 +1,208 @@
+/* Flowers and Montserrat */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&family=Send+Flowers&display=swap");
+@import "resetter.css";
+
+:root {
+  --primary-color: #30343F;
+  --secondary-color: #FAFAFF;
+  --tertiary-color: #E4D9FF;
+  --alternative-color: #273469;
+  --border-color: #1E2749;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  /* change value of rem */
+  font-size: 10px;
+}
+
+body {
+  display: grid;
+  grid-template-columns: repeat(1,100vw);
+  grid-template-rows: 10% 34vh repeat(5,33vh);
+  background-color: var(--primary-color);
+  font-family: "Montserrat", sans-serif;
+  color: var(--secondary-color);
+  height: 100vh;
+  max-width: 100vw;
+}
+
+h1 {
+  font-family: "Send Flowers", sans-serif;
+  font-size: 5rem;
+}
+
+header {
+  grid-column: 1/2;
+  grid-template-rows: 1/2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 99vw;
+  padding: 3vh 2vw;
+  background-color: var(--border-color);
+  color: var(--secondary-color);
+  overflow: hidden;
+}
+header>a{
+  text-decoration: none;
+  color: var(--tertiary-color);
+  font-size: large;
+}
+
+header>img{
+      width: 5rem;
+      height: auto;
+}
+.search {
+  background-color: var(--primary-color);
+  border: 0.2rem solid var(--primary-color);
+  border-radius: 5rem;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 1rem 1rem;
+  color: var(--secondary-color);
+}
+
+.search::placeholder {
+  color: var(--secondary-color);
+}
+
+.search:focus {
+  outline: none;
+  background-color: var(--primary-color);
+}
+
+main {
+  padding: 2rem 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  width: 96vw;
+  margin: 1vw;
+}
+
+.sport {
+  width: 30rem;
+  height: 30rem;
+  background-color: var(--secondary-color);
+  box-shadow: 0 0.2rem 0.4rem rgba(0, 0, 0, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.4rem;
+}
+
+.is-hidden{
+  display: none;
+}
+
+.sport img {
+  width: 95%;
+}
+
+.sport-info {
+  display: flex;
+  color: var(--border-color);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem 1rem 1rem;
+  letter-spacing: 0.5px;
+}
+
+.sport-info h3 {
+  margin-top: 0;
+}
+
+.sport-info span {
+  background-color: var(--overview-color);
+  padding: 0.3rem;
+  border-radius: 3px;
+  font-weight: bold;
+}
+
+.sport-info span.green {
+  color: green;
+}
+.sport-info span.orange {
+  color: orange;
+}
+
+.sport-info span.red {
+  color: red;
+}
+
+.overview {
+  background-color: var(--tertiary-color);
+  color: var(--primary-color);
+  padding: 2rem;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  transform: translateY(101%);
+  transition: transform 0.5s ease-in;
+}
+.overview>h3{
+ font-weight: 700;
+ font-size: 1.5rem; 
+}
+.sport:hover .overview {
+  transform: translateY(0);
+  font-size: medium;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  letter-spacing: 1px;
+  overflow-y: scroll;
+}
+.sport:hover{
+  height: 100vh;
+}
+
+
+
+/* here for news page */
+table {
+  grid-column: 1/2;
+  grid-template-rows: 3/7;
+  border-collapse: collapse;
+  width: 98vw;
+}
+
+th, td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+th{
+  font-size: 3rem;
+  font-weight: 700;
+}
+td{
+  font-size: 2rem;
+}
+.video{
+  width: 30vw;
+}
+
+
+@media(max-width:500px){
+  .competition,.date{
+    display: none;
+  }
+  .title,.video{
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+  }
+  thead{
+    display: none;
+  }
+  
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./styles/login.css">
+    <title>Register</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Register</h1>
+        <form>
+            <div class="form-control">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text" required>
+            </div>
+            <div class="form-control">
+                <label for="password" >Password</label>
+                <input id="password" name="password" type="password" required>
+            </div>
+            <div class="form-control">
+                <label for="password-confirmation">Password</label>
+                <input id="password-confirmation" name="password-confirmation" type="password" required>
+            </div>
+            <button  onclick="return register()" class="btn">Register</button>
+            <p class="text">Do you have an account? <a href="./login.html">Login</a></p>
+        </form>
+    </div>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>

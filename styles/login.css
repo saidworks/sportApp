@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli&family=Send+Flowers&display=swap');
+@import "resetter.css";
+/* https://palettes.shecodes.io */
+
+:root{
+    --primary-color: #30343F;
+    --secondary-color: #FAFAFF;
+    --tertiary-color: #E4D9FF;
+    --alternative-color: #273469;
+    --border-color: #1E2749;
+}
+
+
+*{ 
+ box-sizing: border-box;
+}
+
+html {
+    /* change value of rem */
+    font-size: 10px; 
+}
+
+body {
+    display: grid;
+    grid-template-columns: 10vw 80vw 10vw;
+    grid-template-rows: 10vh 80vh 10vh; 
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family:  'Muli', sans-serif;
+    font-size: 2em;
+        
+}
+
+.container{
+    grid-row: 2/3;
+    grid-column: 2/3;
+    background-color: var(--alternative-color);
+    padding: 2rem 4rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.container h1{
+    font-family: 'Send Flowers', sans-serif;
+    font-size: 5rem;
+    width: 100%;
+    letter-spacing: normal;
+    text-align: center;
+
+}
+
+
+.container a{
+    text-decoration: none;
+    color: var(--tertiary-color);
+}
+.container a:hover{
+    text-decoration: none;
+    color: white;
+}
+
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    color: var(--secondary-color);
+    background-color: var(--primary-color);
+    padding: 1.5rem;
+    font-family: inherit;
+    font-size: 1.6rem;
+    border: 0;
+    border-radius: 0.5rem;
+    width: 100%;
+  
+}
+
+.btn:hover{
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+}
+
+.btn:focus{
+    outline:0;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 3vh;
+}
+
+.form-control {
+    width: 30rem;
+   
+}
+
+.form-control > input, label {
+width: 100%;
+}
+
+
+.error{
+    border: solid red 2px;
+    color: red;
+  }
