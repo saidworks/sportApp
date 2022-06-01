@@ -11,10 +11,9 @@
 </head>
 <body>
    
-    <!-- container for all sport s and div for each sport  and search in the top-->
+ 
     <header>
-        <img src="./images/Orange Alpha Beyond No Limit Bold Sport Logo.png" alt="">
-        <ul class="dropdown">
+        <a href="./index.html"><img src="./images/Orange Alpha Beyond No Limit Bold Sport Logo.png" alt=""></a>        <ul class="dropdown">
             <li class="menu">Menu</li>
             <li><a href="./news.html">Sport news</a></li>
             <li><a href="./livescore.html">Soccer Live Score</a></li>
@@ -24,19 +23,13 @@
             <input type="text" name="" id="search" class="search" placeholder="Search">
         </form>
     </header>
-    
+       <!-- container for all sport s and div for each sport  and search in the top-->
     <main id="main">
         <iframe src="https://www.scorebat.com/embed/livescore/?token=MjAyOTRfMTY1NDAxMjk2Nl85ZWNkYWRkNGVlNGZhMjM5YWY5OGI5Mzc5OTQyZjI5ZTk5YTZjZDkx" frameborder="0" width="600" height="760" allowfullscreen allow='autoplay; fullscreen' style="width:600px;height:760px;overflow:hidden;display:block;" class="_scorebatEmbeddedPlayer_"></iframe>
     </main>
 
     <script src="./js/dropdown.js">
-        (function(d, s, id) {
-    let js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = 'https://www.scorebat.com/embed/embed.js?v=arrv';
-    fjs.parentNode.insertBefore(js, fjs);
-  }(document, 'script', 'scorebat-jssdk'));
+  
     </script>
 
 </body>

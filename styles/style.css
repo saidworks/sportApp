@@ -53,7 +53,7 @@ header>a{
   font-size: large;
 }
 
-header>img{
+header>a>img{
       width: 5rem;
       height: auto;
 }
@@ -139,10 +139,7 @@ main {
   background-color: var(--tertiary-color);
   color: var(--primary-color);
   padding: 2rem;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
+  display: none;
   height: 100%;
   transform: translateY(101%);
   transition: transform 0.5s ease-in;
@@ -152,7 +149,7 @@ main {
  font-size: 1.5rem; 
 }
 .sport:hover .overview {
-  transform: translateY(0);
+  transform: translateY(0%);
   font-size: medium;
   display: flex;
   flex-direction: column;
@@ -160,9 +157,11 @@ main {
   align-items: center;
   letter-spacing: 1px;
   overflow-y: scroll;
+  height: 40vh;
 }
 .sport:hover{
-  height: 100vh;
+  height: min-content;
+ 
 }
 
 
@@ -206,12 +205,14 @@ td{
   text-decoration: none;
   color: var(--tertiary-color);
   font-size: large;
+  width: 100%;
 }
 .dropdown.active>li>a{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-start;
+
+  flex-wrap: nowrap;
   color: var(--primary-color);
   padding: 2%;
 }
@@ -221,7 +222,9 @@ td{
   left:45%;
   background-color: var(--tertiary-color);
   opacity: 0.9;
-  transition: all 0.6s ease-in;
+  transition: all 0.6s ease-in-out;
+  z-index: 100;
+  border-radius: 5px;
 }
 
 .dropdown.active>li>a:hover{
@@ -242,5 +245,6 @@ td{
   thead{
     display: none;
   }
+  
   
 }
