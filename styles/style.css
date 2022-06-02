@@ -245,6 +245,13 @@ td{
   thead{
     display: none;
   }
-  
-  
+  .header{
+    height: 40vh;
+  }
+ .dropdown.active{
+  visibility: visible;
+  display:block;
+  position: static;
+  border-radius:0;
+ }
 }
